@@ -1,0 +1,137 @@
+ bài 1:
+t = int(input("Nhập vào số các phần tử : "))
+while (0 < t <= 100):
+    lst = []
+    for i in range(t):
+        lst.append(input(f"List {i}: "))
+        print(str.title(f"{lst[i]}"))
+    break
+
+ bài 2:
+try:
+    q = int(input("Nhập số câu : "))
+    if (q > 0 and q <= 100):
+        list_str = []
+        for i in range(q):
+            Str = input(f"Câu thứ {i + 1}: ")
+            list_str.append(Str)
+        for i in range(len(list_str)):
+            nguyenam = 0
+            phuam = 0
+            list_str[i] = list_str[i].lower()
+            for f in list_str[i]:
+                if(f == 'a'or f == 'e' or f == 'i' or f == 'u' or f == 'o'):
+                    nguyenam += 1
+                elif(f == ' '):
+                    continue
+                else:
+                    phuam += 1
+            print(f"Test {i + 1}:\n{nguyenam}\n{phuam}")
+    else:
+        print("Hãy nhập lại số câu")
+except:
+    print("Đã sai! Vui lòng nhập lại!")
+    
+ bài 3:
+    def dem_tu():
+    string = input("nhập chuỗi ")
+    word = string.split()
+    # trả về đếm từ
+    return len(word)
+
+
+t = int(input("nhập vào so lan: "))
+if 0 < t <= 100:
+    for i in range(t):
+        result = dem_tu()
+        print(f"test {i + 1}: {result}", end="\n")
+        
+ bài 4:
+        def dem_tu():
+    string = input("nhập chuỗi ")
+    word = string.split()
+    # trả về đếm từ
+    return len(word)
+
+
+t = int(input("nhập vào so lan: "))
+if 0 < t <= 100:
+    for i in range(t):
+        result = dem_tu()
+        print(f"test {i + 1}: {result}", end="\n")
+        
+ bài 5:
+        def dem_tu():
+    string = input("nhập chuỗi ")
+    word = string.split()
+    # trả về đếm từ
+    return len(word)
+
+
+t = int(input("nhập vào so lan: "))
+if 0 < t <= 100:
+    for i in range(t):
+        result = dem_tu()
+        print(f"test {i + 1}: {result}", end="\n")
+        
+bài 6:
+        def thay_the(s1, s2, s3):
+    print(s1.replace(s2, s3))
+
+
+t = int(input("nhập vào so lan thuc hien: "))
+if 0 < t <= 100:
+    for i in range(t):
+        s1 = input("nhap chuoi: ")
+        s2 = input("nhap chuoi thay the cu: ")
+        s3 = input("nhap chuoi thay the mơi: ")
+        print(f"test {i + 1}:", end="\n")
+        thay_the(s1, s2, s3)
+        
+ bài 7:
+        try:
+    v = int(input("Số lượng các test: "))
+    if(v > 0 and v <= 100):
+        for i in range(v):
+            Str1 = input(f"Chuỗi thứ {i + 1}: ")
+            Str2 =input(f"Chuỗi con thứ {i+1}: ")
+            print(f"Test {i+1}: {Str1.count(Str2, 0, len(Str1))}")
+    else:
+        print("Hãy nhấp lại số lượng các test")
+except:
+    print("Nhập sai! Hãy nhập lại")
+    
+ bài 8:
+    def dem_tu(s1):
+    str = s1.split(" ")
+    count = {}
+    for i in str:
+        if i in count:
+            count[i] += 1
+        else:
+            count[i] = 1
+    for i in sorted(count, key=count.get, reverse=False):
+        print(f"{i}-{count[i]}")
+
+t = int(input("Nhập số lần: "))
+if 0 < t <= 100:
+    for i in range(t):
+        s1 = input("Nhập chuỗi: ")
+        print(f"test {i + 1}:", end="\n")
+        dem_tu(s1)
+ bài 9:       
+def count_word():
+    string = input()
+    word = string.split()
+    return len(word)
+y = int(input("nhập vào toàn bộ"))
+for i in range (1, y+1):
+    t = input()
+    x = dict()
+    for j in t:
+        if i in x:
+                x[j] +=1
+        else:
+                 x[j]=1
+    print(f"test {i}: {x}")
+        
